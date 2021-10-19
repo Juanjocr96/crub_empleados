@@ -2,11 +2,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>CRUB Empleados</title>
+		<title>CRUD Empleados</title>
 	</head>
 	<body>
-		<a href='listado.php'>
-			Listado de empleados
-		<a/>
+		<h1>Crud Empleados</h1>
+		<a href='listado.php'>Listado de empleados<a/>
+		<br />
+		<a href='insert.php'>Añadir empleado<a/>
 	</body>
 </html>

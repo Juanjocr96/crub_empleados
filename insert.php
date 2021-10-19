@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="jcarrascorodriguez.guadalupe@alumnado.fundacionloyola.net" />
+		<link rel="stylesheet" href="insert.css" />
 	</head>
 	<body>
+		<h2>Añadir empleado</h2>
+		<form method='POST'>
+			<div>
+				<label for='dni'>DNI:</label>
+				<input type='text' name='dni' />
+			</div>
+			<div>
+				<label for='nombre'>Nombre:</label>
+				<input type='text' name='nombre' />
+			</div>
+			<div>
+				<label for='correo'>Correo:</label>
+				<input type='text' name='correo' />
+			</div>
+			<div>
+				<label for='telefono'>Teléfono:</label>
+				<input type='text' name='telefono' />
+			</div>
+			<input type='submit' value='Añadir' name='enviar'/>
+		</form>
 		<?php
-			//include 'configbd.php';
-			$servidorbd = 'localhost';
-			$usuario = 'root';
-			$contraseña = '';
-			$basedatos = 'bdempleados';
+			include_once 'procesos.php';
 			
-			$mysqli = new mysqli($servidorbd, $usuario, $contraseña, $basedatos);  //Conectar con la BD
+			$procesos = new Procesos;
 			
-			//Funcion que añade un empleado
-			
-			function insert(){
-				$consulta = 'INSERT INTO bdempleados ("dni","nombre","correo","telefono") VALUES ($dni, $nombre, $correo, $telefono)';
-				$resultado = $mysqli->query($consulta);
-				
-				$fila = $resultado ->fetch_array();
+			if(isset($_POST["enviar"])){
+				$procesos->alta($_POST["dni"], $_POST["nombre"], $_POST["correo"], $_POST["telefono"]);
 			}
-			
-			$mysqli->close(); //Cerrar conexion con la BD
 		?>
+		<br />
+		<a href='index.php'>Volver</a>
 	</body>
 </html>

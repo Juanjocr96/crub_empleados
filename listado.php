@@ -5,23 +5,14 @@
 	</head>
 	<body>
 		<?php
-			//include 'configbd.php';
+			include_once 'procesos.php';
 			
-			$servidorbd = 'localhost';
-			$usuario = 'root';
-			$contraseña = '';
-			$basedatos = 'bdempleados';
+			echo '<h2>Listado de empleados</h2>';
 			
-			$mysqli = new mysqli($servidorbd, $usuario, $contraseña, $basedatos);  //Conectar con la BD
+			$procesos = new Procesos;
+			$procesos->listar();
 			
-			//Listado de empleados
-			
-			$consulta = 'SELECT dni, nombre FROM bdempleados';
-			$resultado = $mysqli->query($consulta);
-				
-			$fila = $resultado ->fetch_array();
-				
-			print_r($fila);
+			echo '<br /><a href=index.php>Volver</a>'
 		?>
 	</body>
 </html>
