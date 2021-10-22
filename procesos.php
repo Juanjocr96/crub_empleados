@@ -11,8 +11,7 @@
 			$numfila = $resultado->num_rows;
 			for($i=0;$i<$numfila;$i++){
 				$fila = $resultado->fetch_array(MYSQLI_ASSOC);
-				echo '<p>DNI: '.$fila["dni"].' Nombre: '.$fila["nombre"].' <a href=modificar.php?id='.$fila["idEmpleado"].'>Modificar</a>
-				 <a href=borrar.php?id='.$fila["idEmpleado"].'>Borrar</a></p>';
+				echo '<p>DNI: '.$fila["dni"].' Nombre: '.$fila["nombre"].' <a href=modificar.php?id='.$fila["idEmpleado"].'>Modificar</a> <a href=borrar.php?id='.$fila["idEmpleado"].'>Borrar</a></p>';
 			}
 		}
 		//METODO PARA DAR ALTA EMPLEADOS
