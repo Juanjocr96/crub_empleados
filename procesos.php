@@ -6,17 +6,20 @@
 		}
 		//METODO PARA CONSULTAR EMPLEADOS
 		function listar(){
+			header("Location:./index.php");
 			$consulta = 'SELECT * FROM empleados';
 			$resultado = $this->conexion->consultar($consulta);
 			$numfila = $resultado->num_rows;
 			for($i=0;$i<$numfila;$i++){
 				$fila = $resultado->fetch_array(MYSQLI_ASSOC);
-				echo '<p>DNI: '.$fila["dni"].' Nombre: '.$fila["nombre"].' <a href=modificar.php?id='.$fila["idEmpleado"].'>Modificar</a> <a href=borrar.php?id='.$fila["idEmpleado"].'>Borrar</a></p>';
+				echo '<p>DNI: '.$fila["dni"].' Nombre: '.$fila["nombre"].' <a href=modificar.php?id='.$fila["idEmpleado"].'>Modificar</a>
+				 <a href=borrar.php?id='.$fila["idEmpleado"].'>Borrar</a></p>';
 			}
 		}
 		//METODO PARA DAR ALTA EMPLEADOS
 		function alta($dni, $nombre, $correo, $telefono){
-			$consulta = "INSERT INTO `empleados` (`idEmpleado`, `dni`, `nombre`, `correo`, `telefono`) VALUES (NULL, '".$dni."', '".$nombre."', '".$correo."', '".$telefono."')";
+			$consulta = "INSERT INTO `empleados` (`idEmpleado`, `dni`, `nombre`, `correo`, `telefono`) VALUES
+			 (NULL, '".$dni."', '".$nombre."', '".$correo."', '".$telefono."')";
 			$this->conexion->consultar($consulta);
 		}
 		//METODO PARA MODDIFICAR EMPPLEADOS
@@ -24,7 +27,7 @@
 			$consulta = 'SELECT * FROM empleados WHERE idEmpleado = '.$id;
 			$resultado = $this->conexion->consultar($consulta);
 			$fila = $resultado->fetch_array(MYSQLI_ASSOC);
-			
+
 			echo "<form method='POST'>
 					<div>
 						<label for='dni'>DNI:</label>
@@ -48,7 +51,7 @@
 		function modificar($consulta){
 			$this->conexion->consultar($consulta);
 		}
-		
+
 		//METODO PARA BORRAR EMPLEADOS
 		function borrar($id){
 			$consulta = 'DELETE FROM empleados WHERE idEmpleado = '.$id;
