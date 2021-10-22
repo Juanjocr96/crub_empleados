@@ -20,7 +20,6 @@
 			$consulta = "INSERT INTO `empleados` (`idEmpleado`, `dni`, `nombre`, `correo`, `telefono`) VALUES
 			 (NULL, '".$dni."', '".$nombre."', '".$correo."', '".$telefono."')";
 			$this->conexion->consultar($consulta);
-			header("Location:./index.php");
 		}
 		//METODO PARA MODDIFICAR EMPPLEADOS
 		function listar2($id){
