@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="author" content="juanjo carrasco">
-    <link rel="stylesheet" href="css/boceto.css">
+    <link rel="stylesheet" href="listado.css">
     <title>Boceto layouts</title>
   </head>
   <body>
