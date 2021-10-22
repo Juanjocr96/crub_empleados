@@ -18,6 +18,9 @@ header, nav, footer{
 h1, h2{
   text-align: center;
 }
+a{
+  color:white;
+}
 aside a{
   padding-top: 10px;
   display: block;
