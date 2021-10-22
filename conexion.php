@@ -1,11 +1,11 @@
 <?php
 	class Conexion{
 		function __construct(){
-			$this->servidorbd = 'localhost';
-			$this->usuario = 'root';
-			$this->contraseña = '';
-			$this->basedatos = 'bdempleados';
-			
+			$this->servidorbd = '2daw.esvirgua.com';
+			$this->usuario = 'user2daw_09';
+			$this->contraseña = '5r.a6+3d(i[+';
+			$this->basedatos = 'user2daw_BD1-09';
+
 			$this->mysqli = new mysqli($this->servidorbd, $this->usuario, $this->contraseña, $this->basedatos);
 		}
 		function consultar($consulta){
