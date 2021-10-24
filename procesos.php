@@ -9,7 +9,7 @@
 			$consulta = 'SELECT * FROM empleados';
 			$resultado = $this->conexion->consultar($consulta);
 			$numfila = $resultado->num_rows;
-			echo '<table>
+			/*echo '<table>
 					<th>
 						<td>DNI</td>
 						<td>Nombre</td>
@@ -18,11 +18,13 @@
 						<td>Opcion</td>
 						<td>Opcion</td>
 					</th>'
+				*/
 			for($i=0;$i<$numfila;$i++){
 				$fila = $resultado->fetch_array(MYSQLI_ASSOC);
-				echo '<tr><td>'.$fila["dni"].'</td><td>'.$fila["nombre"].'</td><td>'.$fila["correo"].'</td><td>'.$fila["telefono"].'</td><td><a href=modificar.php?id='.$fila["idEmpleado"].'>Modificar</a></td><td><a href=borrar.php?id='.$fila["idEmpleado"].'>Borrar</a></td></tr>';
+				echo '<p>'.$fila["dni"].$fila["nombre"].$fila["correo"].$fila["telefono"].'<a href=modificar.php?id='.$fila["idEmpleado"].'>Modificar</a>
+					<a href=borrar.php?id='.$fila["idEmpleado"].'>Borrar</a></p>';
 			}
-			echo '</table>'
+			//echo '</table>'
 		}
 		//METODO PARA DAR ALTA EMPLEADOS
 		function alta($dni, $nombre, $correo, $telefono){
