@@ -1,3 +1,68 @@
+*{
+  margin: 0 auto;
+}/*
+html{
+  width: 1423px;
+}*/
+body{
+  width: 1200px;
+  font-size: 18px;
+}
+header{
+  background-color: red;
+  height: 50px;
+}
+header, nav, footer{
+  padding-top: 20px;
+}
+h1, h2{
+  text-align: center;
+}
+a{
+  color:white;
+}
+aside a{
+  padding-top: 10px;
+  display: block;
+  font-size: 1.3em;
+}
+nav{
+  background-color: cyan;
+  height: 50px;
+}
+div{
+  background-color: blue;
+  overflow: hidden;
+}
+div h1{
+  background-color: yellow;
+}
+main div{
+  min-height: 100px;
+  padding: 10px 10px;
+}
+main div p{
+  color: white;
+}
+aside{
+  background-color: green;
+  width: 290px;
+  min-height: 200px;
+  float: left;
+  padding-left: 10px;
+}
+main{
+  background-color: orange;
+  width: 880px;
+  min-height: 500px;
+  float: left;
+  padding: 10px 10px;
+}
+footer{
+  background-color: purple;
+  height: 50px;
+}
+
 form div{
 	width: 15%;
 	height:30px;
