@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="author" content="juanjo carrasco">
-    <link rel="stylesheet" href="listado.css">
+    <link rel="stylesheet" href="insert.css">
     <title>Boceto layouts</title>
   </head>
   <body>
@@ -21,9 +21,8 @@
         <a href="">Enlace 4</a>
       </aside>
       <main>
-        <h1>Listado de empleados</h1>
+        <h1>Añadir empleado</h1>
         <div>
-					<h2>Añadir empleado</h2>
 					<form method='POST'>
 						<div>
 							<label for='dni'>DNI:</label>
@@ -41,7 +40,9 @@
 							<label for='telefono'>Teléfono:</label>
 							<input type='text' name='telefono' />
 						</div>
+						<div>
 						<input type='submit' value='Añadir' name='enviar'/>
+						</div>
 					</form>
 					<?php
 						include_once 'procesos.php';

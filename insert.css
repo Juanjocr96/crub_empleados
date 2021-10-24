@@ -38,7 +38,7 @@ div h1{
   background-color: yellow;
 }
 main div{
-  min-height: 100px;
+  min-height: 30px;
   padding: 10px 10px;
 }
 main div p{
@@ -62,11 +62,9 @@ footer{
   background-color: purple;
   height: 50px;
 }
-
+label{
+	color: white;
+}
 form div{
 	width: 15%;
-	height:30px;
-}
-form div input{
-	float:right;
 }
