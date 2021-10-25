@@ -9,18 +9,18 @@
 			$consulta = 'SELECT * FROM empleados';
 			$resultado = $this->conexion->consultar($consulta);
 			$numfila = $resultado->num_rows;
-			if($numfila == 0)
-				echo 'No hay empleados en la base de datos.'
+			if($numfila == 0){
+				echo 'No hay empleados en la base de datos.';
+			}
 			echo '<table>
-					<th>
+					<tr>
 						<td>DNI</td>
 						<td>Nombre</td>
 						<td>Correo</td>
 						<td>Teléfono</td>
 						<td>Opcion</td>
 						<td>Opcion</td>
-					</th>'
-				*/
+					</tr>';
 			for($i=0;$i<$numfila;$i++){
 				$fila = $resultado->fetch_array(MYSQLI_ASSOC);
 				echo '<tr>
@@ -32,7 +32,7 @@
 								<td><a href=borrar.php?id='.$fila["idEmpleado"].'>Borrar</a></td>
 							</tr>';
 			}
-			echo '</table>'
+			echo '</table>';
 		}
 		//METODO PARA DAR ALTA EMPLEADOS
 		function alta($dni, $nombre, $correo, $telefono){

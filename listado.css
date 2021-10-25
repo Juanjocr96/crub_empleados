@@ -41,7 +41,7 @@ main div{
   min-height: 100px;
   padding: 10px 10px;
 }
-main div p{
+main div p {
   color: white;
 }
 aside{
@@ -57,6 +57,9 @@ main{
   min-height: 500px;
   float: left;
   padding: 10px 10px;
+}
+table{
+  background-color: cyan;
 }
 footer{
   background-color: purple;
