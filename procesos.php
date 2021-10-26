@@ -28,7 +28,7 @@
 								<td>'.$fila["nombre"].'</td>
 								<td>'.$fila["correo"].'</td>
 								<td>'.$fila["telefono"].'</td>
-								<td><a href=modificar.php?id='.$fila["idEmpleado"].'>Modificar</a></td>
+								<td><a href=enlace.php?id='.$fila["idEmpleado"].'&op=mod>Modificar</a></td>
 								<td><a href=borrar.php?id='.$fila["idEmpleado"].'>Borrar</a></td>
 							</tr>';
 			}

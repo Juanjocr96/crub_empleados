@@ -65,6 +65,9 @@ footer{
 label{
 	color: white;
 }
+input{
+  padding: 5px;
+}
 form div{
 	width: 15%;
 }

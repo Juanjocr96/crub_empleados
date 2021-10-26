@@ -28,8 +28,7 @@
 
             $procesos = new Procesos;
             $procesos->listar();
-
-            echo '<br /><a href=index.php>Volver</a>'
+            
           ?>
         </div>
       </main>

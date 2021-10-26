@@ -19,7 +19,7 @@ h1, h2{
   text-align: center;
 }
 a{
-  color:white;
+  color:black;
 }
 aside a{
   padding-top: 10px;
@@ -58,8 +58,11 @@ main{
   float: left;
   padding: 10px 10px;
 }
-table{
+tr:nth-child(2n+1) td{
   background-color: cyan;
+}
+tr:nth-child(2n) td{
+  background-color: #D6FFFE;
 }
 footer{
   background-color: purple;
