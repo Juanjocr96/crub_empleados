@@ -33,6 +33,7 @@
 							</tr>';
 			}
 			echo '</table>';
+			echo '<br /><a id=enlaceanadir href="./enlace.php?op=nuevo">Nuevo empleado</a>';
 		}
 		//METODO PARA DAR ALTA EMPLEADOS
 		function alta($dni, $nombre, $correo, $telefono){

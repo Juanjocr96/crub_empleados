@@ -32,9 +32,7 @@
 						if(isset($_POST["modificar"])){
 						$consulta = 'UPDATE `empleados` SET dni= "'.$_POST["dni"].'", nombre= "'.$_POST["nombre"].'", correo= "'.$_POST["correo"].'", telefono= "'.$_POST["telefono"].'" WHERE idEmpleado = '.$_GET["id"];
 						$procesos->modificar($consulta);
-						header("Location:index.php");
-						}
-						?>
+					?>
     	</div>
     </main>
     </div>
