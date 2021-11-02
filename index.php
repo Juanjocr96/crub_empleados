@@ -28,7 +28,6 @@
 
             $procesos = new Procesos;
             $procesos->listar();
-
           ?>
         </div>
       </main>

@@ -26,6 +26,7 @@ aside a{
   padding-top: 10px;
   display: block;
   font-size: 1.3em;
+  text-align: center;
 }
 nav{
   background-color: cyan;
@@ -66,9 +67,11 @@ footer{
 label{
 	color: white;
 }
-input{
-  padding: 5px;
-}
-form div{
-	width: 15%;
+
+form div input[type=text]{
+  width: 150px;
+  margin-right: 600px;
+  border-radius: 20px;
+  padding-left: 10px;
+  float: right;
 }

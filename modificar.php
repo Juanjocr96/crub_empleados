@@ -30,9 +30,16 @@
 						$procesos->listar2($_GET["id"]);
 
 						if(isset($_POST["modificar"])){
-						$consulta = 'UPDATE `empleados` SET dni= "'.$_POST["dni"].'", nombre= "'.$_POST["nombre"].'", correo= "'.$_POST["correo"].'", telefono= "'.$_POST["telefono"].'" WHERE idEmpleado = '.$_GET["id"];
-						$procesos->modificar($consulta);
-					?>
+						$consulta = 'UPDATE `empleados` SET dni= "'.$_POST["dni"].'",
+            nombre= "'.$_POST["nombre"].'",
+            correo= "'.$_POST["correo"].'",
+            telefono= "'.$_POST["telefono"].'" WHERE idEmpleado = '.$_GET["id"];
+
+            //$_POST[correo]= NULLIF('".$_POST['"correo"']."', '');
+
+            $procesos->modificar($consulta);
+            }
+						?>
     	</div>
     </main>
     </div>
