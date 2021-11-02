@@ -30,6 +30,8 @@ aside a{
   padding-top: 10px;
   display: block;
   font-size: 1.3em;
+  text-align: center;
+  color: white;
 }
 nav{
   background-color: cyan;

@@ -15,10 +15,9 @@
     </nav>
     <div>
       <aside>
-        <a href="./index.php">Listado emlpeados</a>
-        <a href="./insert.php">Añadir empleado</a>
-        <a href="">Enlace 3</a>
-        <a href="">Enlace 4</a>
+        <a href="./index.php">Gestión empleados</a>
+        <a href="./insert.php">Añadir empleados</a>
+        <a href="./buscar.php">Buscar empleado</a>
       </aside>
       <main>
         <h1>Añadir empleado</h1>
