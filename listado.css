@@ -2,10 +2,10 @@
   margin: 0 auto;
 }/*
 html{
-  width: 1423px;
+  width: 1200px;
 }*/
 body{
-  width: 1200px;
+  width: 80%;
   font-size: 18px;
 }
 header{
@@ -25,6 +25,8 @@ a{
 #enlaceanadir{
   background-color: cyan;
   text-align: center;
+  border-radius: 20px;
+  font-size: 0.5em;
 }
 aside a{
   padding-top: 10px;
@@ -46,33 +48,37 @@ div h1{
 }
 main div{
   min-height: 100px;
-  padding: 10px 10px;
+  padding: 10px 0.8333333333333333%;
 }
 main div p {
   color: white;
 }
 aside{
   background-color: green;
-  width: 290px;
+  /*width: 290px;*/
+  width: 24.16666666666667%; /*290PX respecto a 1200px de caja contenedora*/
   min-height: 200px;
   float: left;
-  padding-left: 10px;
+  /*padding-left: 10px;*/
+  padding-left:0.8333333333333333%; /*10PX respecto a 1200px de caja contenedora*/
 }
 main{
   background-color: orange;
-  width: 880px;
+  /*width: 880px;*/
+  width: 73.33333333333333%;
   min-height: 500px;
   float: left;
-  padding: 10px 10px;
+  /*Padding de 10px*/
+  padding: 10px 0.8333333333333333%; /*10PX respecto a 880px de caja contenedora*/
+}
+table{
+  /*width: 67.55340909090909% /*Width: 595px; Respecto a su caja contenedora de 880px*/
 }
 tr:nth-child(2n+1) td{
   background-color: cyan;
 }
 tr:nth-child(2n) td{
   background-color: #D6FFFE;
-}
-a#enlaceanadir{
-  border-radius: 20px;
 }
 footer{
   background-color: purple;

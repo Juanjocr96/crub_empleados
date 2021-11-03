@@ -2,8 +2,9 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="author" content="juanjo carrasco">
-    <link rel="stylesheet" href="listado.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="juanjo carrasco" />
+    <link rel="stylesheet" href="./listado.css" />
     <title>Boceto layouts</title>
   </head>
   <body>
