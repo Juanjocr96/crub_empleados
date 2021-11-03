@@ -17,7 +17,8 @@
       <aside>
         <a href="./index.php">Gestión empleados</a>
         <a href="./insert.php">Añadir empleados</a>
-        <a href="./buscar.php">Buscar empleado</a>
+        <a href="./buscar.php">Buscar empleado (DNI)</a>
+        <a href="./buscarnombre.php">Buscar empleado (Nombre)</a>
       </aside>
       <main>
         <h1>Añadir empleado</h1>

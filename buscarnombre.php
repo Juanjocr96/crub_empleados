@@ -2,9 +2,8 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="juanjo carrasco" />
-    <link rel="stylesheet" href="./listado.css" />
+    <meta name="author" content="juanjo carrasco">
+    <link rel="stylesheet" href="./listado.css">
     <title>Boceto layouts</title>
   </head>
   <body>
@@ -22,16 +21,25 @@
         <a href="./buscarnombre.php">Buscar empleado (Nombre)</a>
       </aside>
       <main>
-        <h1>Listado de empleados</h1>
+        <h1>Buscar empleado</h1>
         <div>
-          <?php
-            include_once 'procesos.php';
+          <form method='POST'>
+            <div>
+              <label for='nombre'>Nombre:</label>
+              <input type='text' name='nombre' />
+              <input type="submit" name=buscar value='Buscar' />
+            </div>
+          </form>
+					<?php
+						include_once 'procesos.php';
 
-            $procesos = new Procesos;
-            $procesos->listar();
-          ?>
-        </div>
-      </main>
+						$procesos = new Procesos;
+            if(isset($_POST["buscar"])){
+              $procesos->buscarnombre($_POST["nombre"]);
+            }
+						?>
+    	</div>
+    </main>
     </div>
     <footer>
       <h2>Pie de página</h2>
