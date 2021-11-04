@@ -85,52 +85,53 @@
 		function buscar($dni){
 			$consulta = 'SELECT * FROM empleados WHERE dni = "'.$dni.'"';
 			$resultado = $this->conexion->consultar($consulta);
-			$numfila = $resultado->num_rows;
-			if($numfila == 0){
-				echo 'No hay empleados con ese DNI.';
-			}
-			echo '<table>
-					<tr>
-						<td>DNI</td>
-						<td>Nombre</td>
-						<td>Correo</td>
-						<td>Teléfono</td>
-					</tr>';
-			for($i=0;$i<$numfila;$i++){
-				$fila = $resultado->fetch_array(MYSQLI_ASSOC);
-				echo '<tr>
+			$fila = $resultado->fetch_array(MYSQLI_ASSOC);
+			if($fila){
+				echo '<table>
+						<tr>
+							<td>DNI</td>
+							<td>Nombre</td>
+							<td>Correo</td>
+							<td>Teléfono</td>
+						</tr>
+						 <tr>
 								<td>'.$fila["dni"].'</td>
 								<td>'.$fila["nombre"].'</td>
 								<td>'.$fila["correo"].'</td>
 								<td>'.$fila["telefono"].'</td>
-							</tr>';
+						</tr>';
+				echo '</table>';
 			}
-			echo '</table>';
+			else{
+				echo 'No se han encontrado filas';
+			}
 		}
-		function buscarnombre($nombre){
-			$consulta = "SELECT * FROM empleados WHERE nombre LIKE '%$nombre%'";
-			$resultado = $this->conexion->consultar($consulta);
-			$numfila = $resultado->num_rows;
-			if($numfila == 0){
-				echo 'No hay empleados con ese Nombre.';
-			}
+	//Metodo para buscar un empleado por su nombre/apellido.
+	function buscarnombre($nombre){
+		$consulta = "SELECT * FROM empleados WHERE nombre LIKE '%$nombre%'";
+		$resultado = $this->conexion->consultar($consulta);
+		$numfila = $resultado->num_rows;
+		if($numfila == 0){
+			echo 'Filas no encontradas';
+		}
+		else{
 			echo '<table>
-					<tr>
-						<td>DNI</td>
-						<td>Nombre</td>
-						<td>Correo</td>
-						<td>Teléfono</td>
-					</tr>';
-			for($i=0;$i<$numfila;$i++){
-				$fila = $resultado->fetch_array(MYSQLI_ASSOC);
+				<tr>
+					<td>DNI</td>
+					<td>Nombre</td>
+					<td>Correo</td>
+					<td>Teléfono</td>
+				</tr>';
+			while($fila = $resultado->fetch_array(MYSQLI_ASSOC)){
 				echo '<tr>
 								<td>'.$fila["dni"].'</td>
 								<td>'.$fila["nombre"].'</td>
 								<td>'.$fila["correo"].'</td>
 								<td>'.$fila["telefono"].'</td>
 							</tr>';
-			}
+				}
 			echo '</table>';
+			}
 		}
 	}
 ?>
