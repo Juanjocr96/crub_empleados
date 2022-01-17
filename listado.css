@@ -1,11 +1,11 @@
 *{
   margin: 0 auto;
-}/*
+}
 html{
   width: 1200px;
-}*/
+}
 body{
-  width: 80%;
+  width: 100%;
   font-size: 18px;
 }
 header{
@@ -19,7 +19,7 @@ h1, h2{
   text-align: center;
 }
 a{
-  color:black;
+  color:white;
   text-decoration: none;
 }
 #enlaceanadir{
@@ -35,10 +35,36 @@ aside a{
   text-align: center;
   color: white;
 }
+
+/**---------FLEX BOX---------**/
+
 nav{
   background-color: cyan;
   height: 50px;
+  text-align: center;
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+
+nav div{
+  display: inline-block;
+}
+.cajamenu{
+  width: 29.66%;
+  height: 30px;
+  padding-top: 10px;
+  flex-grow: 2;
+  flex-shrink: 2;
+  margin-left: 5px;
+}
+#nocambia{
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+/****---------------*****/
+
 div{
   background-color: blue;
   overflow: hidden;
@@ -80,7 +106,26 @@ tr:nth-child(2n+1) td{
 tr:nth-child(2n) td{
   background-color: #D6FFFE;
 }
+
+div > form {
+  color: white;
+}
+
+ul > li{
+  display: inline-block;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 footer{
   background-color: purple;
   height: 50px;
+}
+
+/*Media query*/
+
+@media screen and (max-width: 375px){
+  h1{
+    font-size: 0.9em;
+  }
 }

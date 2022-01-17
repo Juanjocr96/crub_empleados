@@ -39,8 +39,6 @@
 		function alta($dni, $nombre, $correo, $telefono){
 			$consulta = "INSERT INTO `empleados` (`idEmpleado`, `dni`, `nombre`, `correo`, `telefono`) VALUES
 			 (NULL, '".$dni."', '".$nombre."',NULLIF('".$correo."', ''), '".$telefono."')";
-
-
 			$this->conexion->consultar($consulta);
 		}
 		//METODO PARA MODDIFICAR EMPPLEADOS

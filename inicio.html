@@ -12,25 +12,35 @@
       <h1>Aplicación gestión de empleados</h1>
     </header>
     <nav>
-      <h2>Menú navegación</h2>
+      <div class="cajamenu">
+        <a href="./inicio.html">Inicio</a>
+      </div>
+      <div class="cajamenu">
+        <a href="#">Quienes somos</a>
+      </div>
+      <div class="cajamenu" id="nocambia">
+        <a href="./inicio.html">Iniciar sesión</a>
+      </div>
     </nav>
     <div>
       <aside>
-        <a href="./inicio.html">Inicio sesión</a>
         <a href="./index.php">Gestión empleados</a>
         <a href="./insert.php">Añadir empleados</a>
         <a href="./buscar.php">Buscar empleado (DNI)</a>
         <a href="./buscarnombre.php">Buscar empleado (Nombre)</a>
       </aside>
       <main>
-        <h1>Listado de empleados</h1>
+        <h1>Inicio sesión</h1>
         <div>
-          <?php
-            include_once 'procesos.php';
-
-            $procesos = new Procesos;
-            $procesos->listar();
-          ?>
+          <form method="post">
+            <div>
+              <label for="usuario">Usuario</label>
+              <input type="text" name="usuario" />
+              <label for="pw">Contraseña</label>
+              <input type="password" name="pw" />
+              <a href="./sesion.html">Iniciar sesion</a>
+            </div>
+          </form>
         </div>
       </main>
     </div>
